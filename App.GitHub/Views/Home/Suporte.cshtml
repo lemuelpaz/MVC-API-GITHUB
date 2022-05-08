@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Suporte da Aplicação</h1>
+    
+</div>
+<br />
+
+
+@*@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+*@
+{
+        
+    <div class="form-group">
+    <label for="exampleInputEmail1"><b>Assunto:</b></label>
+    <input type="text" class="form-control" id="assunto1" name="Tema" aria-describedby="emailHelp" placeholder="Digite o Assunto do E-mail.">
+    <small id="emailHelp" class="form-text text-muted">
+     </small>
+    </div>  
+
+     <div class="form-group">
+    <label for="exampleFormControlTextarea1"><b>Mensagem</b></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="Texto" placeholder="Texto" rows="4"></textarea>
+  
+     
+     
+
+
+  </div>
+
+
+
+  <center>
+    <button type="submit" class="btn btn-success">Enviar </button>
+    <button type="reset" class="btn btn-dark">Limpar</button>
+</center>
+
+    
+}

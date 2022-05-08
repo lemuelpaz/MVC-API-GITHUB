@@ -1,0 +1,46 @@
+﻿@model IEnumerable<App.GitHub.ViewModels.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+
+<table class="table table-bordered">
+        
+    <thead">  
+        <tr align="center">
+            <th align="center">                   
+                @Html.DisplayNameFor(model => model.Id)                
+            </th>          
+            <th align="center">                
+                @Html.DisplayNameFor(model => model.Login)                  
+            </th>    
+            <th>                Busca
+            </th>
+        </tr>       
+    </thead>    
+         <tbody aling="center">       
+              @await Html.PartialAsync("_AllUsers", Model)       
+         </tbody>
+</table>
+
+<div class="d-grid gap-2 col-4 mx-auto">
+  <button class="btn btn-outline-dark" id="btnCarregaUsuarios" type="button">Quero ver um pouco mais</button>
+  
+  <a class="btn btn-light" href="https://docs.github.com/pt/support" role="button">Suporte</a>
+
+</div>
+
+
+<div class="d-flex justify-content-center">   
+    <button  type="button" alt="Loading" id="loading"></button>    
+</div>
+
+
+@section Scripts{
+    <script>
+        DetalhesDoUsuario();
+        CarregarMaisUsuarios();
+    </script>
+}

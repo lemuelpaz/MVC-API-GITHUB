@@ -1,0 +1,22 @@
+﻿@model IEnumerable<App.GitHub.ViewModels.UsuarioViewModel>
+
+@foreach (var item in Model)
+{
+    <tr data-id="@item.Id">
+        <td>
+            <center>
+            @Html.DisplayFor(modelItem => item.Id)
+            </center>
+        </td>
+        <td>
+            <center>
+            @Html.DisplayFor(modelItem => item.Login)
+            </center>
+        </td>
+        <td>
+            <center>
+            <button class="btn btn-outline-dark btnModal" data-login="@item.Login"><span class="fa-solid fa-info"></span></button>
+            </center>
+        </td>
+    </tr>
+}
